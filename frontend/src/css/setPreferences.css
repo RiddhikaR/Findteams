@@ -1,0 +1,106 @@
+/* Fullscreen container with gradient background */
+.preferences-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff); /* Indigo gradient */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glassy card box */
+.preferences-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 50px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.preferences-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.preferences-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f46e5; /* Indigo heading */
+  margin-bottom: 1.5rem;
+}
+
+/* React-Select container styling */
+.preferences-select {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.preferences-select .react-select__control {
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.preferences-select .react-select__control--is-focused {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+}
+
+.preferences-select .react-select__menu {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Save button */
+.save-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #4f46e5, #667eea); /* Indigo-blue gradient */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-btn:hover {
+  background: linear-gradient(90deg, #4338ca, #5a67d8);
+  transform: translateY(-2px);
+}
+
+.save-btn:active {
+  transform: translateY(1px);
+}
+
+/* Message */
+.preferences-message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #475569; /* Dark gray */
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
