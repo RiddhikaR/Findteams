@@ -16,7 +16,7 @@ function ChatWindow({ group, onBack }) {
   }, [messages]);
 
   useEffect(() => {
-    if (!group) return;
+    if (!group || !token) return;
 
     const fetchMessages = async () => {
       try {
