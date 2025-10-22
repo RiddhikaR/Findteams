@@ -1,3 +1,52 @@
+.chat-bubble-container {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 10px;
+}
+
+/* My messages aligned right */
+.chat-bubble-container.mine {
+  align-items: flex-end;
+}
+
+/* Others’ messages aligned left */
+.chat-bubble-container.other {
+  align-items: flex-start;
+}
+
+/* Common bubble style */
+.chat-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  word-wrap: break-word;
+}
+
+/* My messages (right side) */
+.chat-bubble.mine {
+  background-color: #0078ff;
+  color: white;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+  margin-left: auto;
+}
+
+/* Others’ messages (left side) */
+.chat-bubble.other {
+  background-color: #e5e5ea;
+  color: black;
+  border-bottom-left-radius: 4px;
+  text-align: left;
+  margin-right: auto;
+}
+
+.sender-name {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 3px;
+  align-self: flex-start;
+}
+
 .team-chats-container {
   display: flex;
   height: 100vh;

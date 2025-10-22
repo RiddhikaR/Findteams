@@ -22,6 +22,9 @@ function WebsiteLoginPage() {
       if (data.success) {
         sessionStorage.setItem("token", data.token);
         sessionStorage.setItem("username", username);
+        
+        sessionStorage.setItem("studentName", data.studentName);
+        sessionStorage.setItem("userId", data.userId);
         navigate("/Dashboard");
       } else {
         setMessage(data.message);
